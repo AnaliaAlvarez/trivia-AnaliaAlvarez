@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">   
+</head>
+<body>
+    <div class="panel">        
+
+        <h2>Poniendo a prueba nuestro conocimiento</h2>
+
+        <div class="question-container" id="question-container" style="display: block;">            
+
+            <div id="question"></div>
+            <hr>
+
+            <div class="option-container">
+                a. <button class="option" onclick="seleccionarResultado(0)" id="opcion-0" ></button><br>   
+                b. <button class="option" onclick="seleccionarResultado(1)" id="opcion-1" ></button><br>
+                c. <button class="option" onclick="seleccionarResultado(2)" id="opcion-2"></button><br>
+                d. <button class="option" onclick="seleccionarResultado(3)" id="opcion-3"></button><br>
+            </div>
+            <hr>
+
+            <div class="result">  
+            </div>
+
+            <div class="navigation">            
+                <button class="next" onclick="mostrarSiguientePregunta()">Siguiente</button>
+            </div>
+        </div>
+
+        <div id="answer-container" style="display: none;">
+            <h3>Estos son tus resultados:</h3>
+            <hr>
+            Cantidad de respuestas correctas: <b style="color: blue"><span id="answer-count-container"></span></b>
+            <hr>
+            <h3>F5 para reiniciar la partida</h3>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
