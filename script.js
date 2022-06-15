@@ -50,12 +50,10 @@ function mostrarPregunta(indice) {
     const respuestas = pregunta.a
 
     //renderizo las respuestas
-    for (let i=0; i < respuestas.length; i++) {
-
-        const respuesta = respuestas[i]
+    respuestas.map(function(respuesta, i) {
         const opcion = document.getElementById("opcion-" + i)
         opcion.innerText = respuesta.text;
-    }
+    })
     
     //renderizo la pregunta
     const question = document.getElementById("question")
@@ -77,13 +75,8 @@ function mostrarResultados() {
 
     const containerResutlado = document.getElementById("answer-container")
     containerResutlado.style = "display: block"
-
-    let respuestasCorrectas = 0
-    for (let i=0; i < resultados.length; i++) {
-        if (resultados[i] == true) {
-            respuestasCorrectas += 1
-        }
-    }
+    
+    const respuestasCorrectas = resultados.filter(function(resultado) { return resultado === true}).length
 
     const containerRespuestasCorrectas = document.getElementById("answer-count-container")
     containerRespuestasCorrectas.innerText = respuestasCorrectas.toString()    
