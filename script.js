@@ -6,7 +6,8 @@ const preguntas = [
         a: [{ text: "Motivación", isCorrect: false },
             { text: "Planificación y evaluación de metas", isCorrect: false },
             { text: "Construcción del sí mismo", isCorrect: false },
-            { text: "Todas las opciones son correctas", isCorrect: true }
+            { text: "Todas las opciones son correctas", isCorrect: true },
+            { text: "Todas las opciones son incorrectas", isCorrect: false }
         ]
 
     },
@@ -44,15 +45,37 @@ function mostrarSiguientePregunta() {
     }    
 }
 
+function crearRespuesta(respuesta, i) {
+    
+    const div = document.createElement("div")
+    const indice = i + 1
+    div.innerText = indice.toString() + ". "
+
+    const btn = document.createElement("button")
+    btn.className = "option"
+    btn.innerText = respuesta.text
+
+    btn.onclick = () => {
+        seleccionarResultado(respuesta)
+    }   
+    
+    div.appendChild(btn)     
+    return div
+}
+
 function mostrarPregunta(indice) {
     
     const pregunta = preguntas[indice]
     const respuestas = pregunta.a
 
+    const container = document.getElementById("option-container")
+
+    document.getElementById("option-container").innerHTML = ""
+
     //renderizo las respuestas
-    respuestas.map(function(respuesta, i) {
-        const opcion = document.getElementById("opcion-" + i)
-        opcion.innerText = respuesta.text;
+    respuestas.map((respuesta, i) => {
+        const respuestaDiv = crearRespuesta(respuesta, i)
+        container.appendChild(respuestaDiv)
     })
     
     //renderizo la pregunta
@@ -60,9 +83,9 @@ function mostrarPregunta(indice) {
     question.innerText = pregunta.q  
 }
 
-function seleccionarResultado(indice) {
+function seleccionarResultado(respuesta) {
 
-    const valorRespuesta = preguntas[preguntaActual].a[indice].isCorrect
+    const valorRespuesta = respuesta.isCorrect
     resultados.push(valorRespuesta)
 
     mostrarSiguientePregunta()
@@ -76,10 +99,17 @@ function mostrarResultados() {
     const containerResutlado = document.getElementById("answer-container")
     containerResutlado.style = "display: block"
     
-    const respuestasCorrectas = resultados.filter(function(resultado) { return resultado === true}).length
+    const respuestasCorrectas = resultados.filter((resultado) => { return resultado === true}).length
 
     const containerRespuestasCorrectas = document.getElementById("answer-count-container")
     containerRespuestasCorrectas.innerText = respuestasCorrectas.toString()    
 }
 
 mostrarPregunta(0)
+
+document.getElementById("btn-siguiente").onclick = () => {
+
+    if (confirm("¿Está seguro de que desea saltearse la pregunta y continuar con la siguiente?")) {
+        mostrarSiguientePregunta()
+    }
+}   
