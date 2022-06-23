@@ -112,4 +112,32 @@ document.getElementById("btn-siguiente").onclick = () => {
     if (confirm("¿Está seguro de que desea saltearse la pregunta y continuar con la siguiente?")) {
         mostrarSiguientePregunta()
     }
-}   
+} 
+
+    	// Botón evaluar
+const evaluate = document.getElementsByClassName("evaluate");
+  
+        // Retroalimentación-- evaluación
+evaluate[0].addEventListener("click", () => {
+    if (selected == "true") {
+        result[0].innerHTML = "True";
+        result[0].style.color = "green";
+    } else {
+        result[0].innerHTML = "False";
+        result[0].style.color = "red";
+    }
+})
+
+startButton = game.add.button(game.world.width*0.5, game.world.height*0.5, 'button', startGame, this, 1, 0, 2);
+startButton.anchor.set(0.5);
+
+function comprobar(){
+	var respuesta = $("input[type=radio]:checked").val();
+	if(respuesta ==indicie_respuesta_correcta){
+		alert("Correcto");
+	}else{
+		alert("Incorrecto");
+	}
+}
+
+<input type="reset" value="Reset">

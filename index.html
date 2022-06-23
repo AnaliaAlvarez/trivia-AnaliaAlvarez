@@ -24,8 +24,10 @@
             <div class="result">  
             </div>
 
-            <div class="navigation">            
+            <div class="navigation">
+                <button class="evaluate">Evaluar</button>            
                 <button class="next" id="btn-siguiente">Siguiente</button>
+                
             </div>
         </div>
 
@@ -35,6 +37,11 @@
             Cantidad de respuestas correctas: <b style="color: blue"><span id="answer-count-container"></span></b>
             <hr>
             <h3>F5 para reiniciar la partida</h3>
+            <div>
+                <button class="btn-danger" onclick="reset()">reset</button>
+            </div>
+            <input type = "button" value = "Reset data" onClick = "fun()"/> 
+            
         </div>
     </div>
     <script src="script.js"></script>
