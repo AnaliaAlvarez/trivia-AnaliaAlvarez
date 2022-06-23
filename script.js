@@ -140,4 +140,3 @@ function comprobar(){
 	}
 }
 
-<input type="reset" value="Reset">
