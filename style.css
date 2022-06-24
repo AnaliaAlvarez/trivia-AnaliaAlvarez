@@ -5,7 +5,7 @@ body{
     height: 100vh;    
 }
 
-.panel{
+/*.panel{
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -67,4 +67,4 @@ body{
 .evaluate{
     
     background-color: #50DBB4;
-}
+}*/

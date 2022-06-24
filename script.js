@@ -2,7 +2,7 @@
 const preguntas = [
     {
         id: 0,
-        q: "La orientación a futuro de los adolescentes incorpora varios procesos",
+        q: "La orientación a futuro de los adolescentes incorpora varios procesos:",
         a: [{ text: "Motivación", isCorrect: false },
             { text: "Planificación y evaluación de metas", isCorrect: false },
             { text: "Construcción del sí mismo", isCorrect: false },
@@ -23,7 +23,7 @@ const preguntas = [
     },
     {
         id: 2,
-        q: "La percepción del futuro se ve influenciada por",
+        q: "La percepción del futuro se ve influenciada por:",
         a: [{ text: "el individuo y la cultura", isCorrect: false },
             { text: "el entorno social y la realidad virtual", isCorrect: false },
             { text: "el entorno social y cultural", isCorrect: true },
@@ -32,7 +32,7 @@ const preguntas = [
     }
 ]
 
-const resultados = []
+let resultados = []
 let preguntaActual = 0
 
 function mostrarSiguientePregunta() {
@@ -52,7 +52,7 @@ function crearRespuesta(respuesta, i) {
     div.innerText = indice.toString() + ". "
 
     const btn = document.createElement("button")
-    btn.className = "option"
+    btn.className = "option btn btn-primary mb-1"
     btn.innerText = respuesta.text
 
     btn.onclick = () => {
@@ -105,38 +105,38 @@ function mostrarResultados() {
     containerRespuestasCorrectas.innerText = respuestasCorrectas.toString()    
 }
 
-mostrarPregunta(0)
+function reset() {
+    resultados = []
+    preguntaActual = 0
 
-document.getElementById("btn-siguiente").onclick = () => {
+    mostrarPregunta(0)
 
-    if (confirm("¿Está seguro de que desea saltearse la pregunta y continuar con la siguiente?")) {
-        mostrarSiguientePregunta()
-    }
-} 
+    const container = document.getElementById("question-container")
+    container.style = "display: block"
 
-    	// Botón evaluar
-const evaluate = document.getElementsByClassName("evaluate");
-  
-        // Retroalimentación-- evaluación
-evaluate[0].addEventListener("click", () => {
-    if (selected == "true") {
-        result[0].innerHTML = "True";
-        result[0].style.color = "green";
-    } else {
-        result[0].innerHTML = "False";
-        result[0].style.color = "red";
-    }
-})
+    const containerResutlado = document.getElementById("answer-container")
+    containerResutlado.style = "display: none"
+}
 
-startButton = game.add.button(game.world.width*0.5, game.world.height*0.5, 'button', startGame, this, 1, 0, 2);
-startButton.anchor.set(0.5);
+function init() {
 
-function comprobar(){
+    mostrarPregunta(0)
+
+    document.getElementById("btn-siguiente").onclick = () => {
+
+        if (confirm("¿Está seguro de que desea saltearse la pregunta y continuar con la siguiente?")) {
+            mostrarSiguientePregunta()
+        }
+    } 
+}
+
+/* function comprobar(){
 	var respuesta = $("input[type=radio]:checked").val();
-	if(respuesta ==indicie_respuesta_correcta){
+	if(respuesta == indicie_respuesta_correcta){
 		alert("Correcto");
 	}else{
 		alert("Incorrecto");
 	}
-}
+}*/
 
+init()

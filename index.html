@@ -5,16 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-    <div class="panel">        
+    <div class="container mt-4">        
 
         <h2>Poniendo a prueba nuestro conocimiento</h2>
 
+        <hr>
+
         <div class="question-container" id="question-container" style="display: block;">            
 
-            <div id="question"></div>
-            <hr>
+            <div id="question" class="mb-3 fw-bold"></div>            
 
             <div id="option-container">                
             </div>
@@ -25,25 +27,24 @@
             </div>
 
             <div class="navigation">
-                <button class="evaluate">Evaluar</button>            
-                <button class="next" id="btn-siguiente">Siguiente</button>
+                <button class="btn btn-secondary" id="btn-siguiente">Pasar a la siguiente</button>
                 
             </div>
         </div>
 
         <div id="answer-container" style="display: none;">
-            <h3>Estos son tus resultados:</h3>
-            <hr>
+            <h4>Estos son tus resultados:</h4>
+            
             Cantidad de respuestas correctas: <b style="color: blue"><span id="answer-count-container"></span></b>
-            <hr>
-            <h3>F5 para reiniciar la partida</h3>
+            <hr>            
             <div>
-                <button class="btn-danger" onclick="reset()">reset</button>
-            </div>
-            <input type = "button" value = "Reset data" onClick = "fun()"/> 
+                <button class="btn btn-danger" onclick="reset()">Reiniciar</button>
+            </div>            
             
         </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 </html>
