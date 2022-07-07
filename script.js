@@ -156,9 +156,20 @@ function init() {
 
     document.getElementById("btn-siguiente").onclick = () => {
 
-        if (confirm("¿Está seguro de que desea saltearse la pregunta y continuar con la siguiente?")) {
-            mostrarSiguientePregunta()
-        }
+        Swal.fire({
+            title: "Atención",
+            text: "¿Está seguro de que desea saltearse la pregunta y continuar con la siguiente?",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#111',
+            cancelButtonColor: 'blue',
+            confirmButtonText: 'Sí',
+            cancelButtonText: 'No'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                mostrarSiguientePregunta()
+            }
+        })        
     } 
 }
 
