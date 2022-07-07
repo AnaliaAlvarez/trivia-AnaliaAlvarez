@@ -38,6 +38,8 @@ let preguntaActual = 0
 function mostrarSiguientePregunta() {
 
     preguntaActual++
+    localStorage.setItem("preguntaActual", preguntaActual)
+
     if (preguntaActual >= preguntas.length) {
         mostrarResultados()
     } else {        
@@ -63,7 +65,7 @@ function crearRespuesta(respuesta, i) {
     return div
 }
 
-function mostrarPregunta(indice) {
+function mostrarPregunta(indice) {    
     
     const pregunta = preguntas[indice]
     const respuestas = pregunta.a
@@ -80,13 +82,15 @@ function mostrarPregunta(indice) {
     
     //renderizo la pregunta
     const question = document.getElementById("question")
-    question.innerText = pregunta.q  
+    question.innerHTML = "<span style='color: blue'>" + (parseInt(indice) + 1)  + "</span>.- " +  pregunta.q  
 }
 
 function seleccionarResultado(respuesta) {
 
     const valorRespuesta = respuesta.isCorrect
     resultados.push(valorRespuesta)
+
+    localStorage.setItem("resultados", JSON.stringify(resultados))
 
     mostrarSiguientePregunta()
 }
@@ -106,8 +110,12 @@ function mostrarResultados() {
 }
 
 function reset() {
+
     resultados = []
+    localStorage.setItem("resultados", JSON.stringify(resultados))
+
     preguntaActual = 0
+    localStorage.setItem("preguntaActual", preguntaActual)
 
     mostrarPregunta(0)
 
@@ -120,7 +128,22 @@ function reset() {
 
 function init() {
 
-    mostrarPregunta(0)
+    preguntaActual = localStorage.getItem("preguntaActual") || 0    
+
+    try {
+        resultados = JSON.parse(localStorage.getItem("resultados"))
+    } catch (e) {
+        resultados = []
+    }    
+
+    if (preguntaActual >= preguntas.length) {
+        mostrarResultados()
+    } else {
+        mostrarPregunta(preguntaActual)
+    }
+    
+    console.log(parseInt(preguntaActual) + 1)
+    console.log(resultados)
 
     document.getElementById("btn-siguiente").onclick = () => {
 
@@ -129,14 +152,5 @@ function init() {
         }
     } 
 }
-
-/* function comprobar(){
-	var respuesta = $("input[type=radio]:checked").val();
-	if(respuesta == indicie_respuesta_correcta){
-		alert("Correcto");
-	}else{
-		alert("Incorrecto");
-	}
-}*/
 
 init()
