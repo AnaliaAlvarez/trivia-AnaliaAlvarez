@@ -88,6 +88,15 @@ function mostrarPregunta(indice) {
 function seleccionarResultado(respuesta) {
 
     const valorRespuesta = respuesta.isCorrect
+
+    Swal.fire({
+        position: 'top-end',
+        icon: respuesta.isCorrect ? 'success' : 'error',
+        title: 'Respuesta ' + (respuesta.isCorrect ? 'Correcta' : "Incorrecta"),
+        showConfirmButton: false,
+        timer: 1000
+    })
+
     resultados.push(valorRespuesta)
 
     localStorage.setItem("resultados", JSON.stringify(resultados))
