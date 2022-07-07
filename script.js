@@ -144,6 +144,9 @@ function init() {
     } catch (e) {
         resultados = []
     }    
+    if (!resultados) {
+        resultados = []
+    }
 
     if (preguntaActual >= preguntas.length) {
         mostrarResultados()
