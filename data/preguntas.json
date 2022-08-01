@@ -335,22 +335,22 @@
    },
    {
       "id":15,
-      "q":"En el muestreo de un estudio cualitativo:",
+      "q":"En el tipo de muestra en cadena o por redes (bola de nieve):",
       "a":[
          {
-            "text":"La muestra final se decide cuando se alcanza la saturación de categorías.",
+            "text":"Se eligen los participantes de manera probabilística.",
+            "isCorrect":false
+         },
+         {
+            "text":"Se utilizan ante fenómenos complejos.",
+            "isCorrect":false
+         },
+         {
+            "text":"Los participantes claves facilitan contactos para incorporarse a la muestra.",
             "isCorrect":true
          },
          {
-            "text":"La muestra debe componerse por un mínimo de 100 sujetos.",
-            "isCorrect":false
-         },
-         {
-            "text":"No se puede trabajar con estudio de caso.",
-            "isCorrect":false
-         },
-         {
-            "text":"Todas las opciones son correctas.",
+            "text":"Se buscan fenómenos que se alejan de la normalidad.",
             "isCorrect":false
          }
       ]
