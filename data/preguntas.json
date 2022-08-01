@@ -68,5 +68,291 @@
              "isCorrect":false
           }
        ]
-    }
+    },
+    {
+        "id":3,
+        "q":"La percepción del futuro se ve influenciada por:",
+        "a":[
+           {
+              "text":"el individuo y la cultura",
+              "isCorrect":false
+           },
+           {
+              "text":"el entorno social y la realidad virtual",
+              "isCorrect":false
+           },
+           {
+              "text":"el entorno social y cultural",
+              "isCorrect":true
+           },
+           {
+              "text":"el individuo y la realidad virtual",
+              "isCorrect":false
+           }
+        ]
+     },
+     {
+      "id":4,
+      "q":"Podemos hablar de distintos momentos dentro del proceso de investigación. Los mismos son:",
+      "a":[
+         {
+            "text":"Conceptual, metodológico, empírico, analítico, difusión y extensión",
+            "isCorrect":true
+         },
+         {
+            "text":"Marco teórico, metodológico, empírico, analítico, difusión y extensión",
+            "isCorrect":false
+         },
+         {
+            "text":"Conceptual, metodológico, empírico, analítico, conclusiones",
+            "isCorrect":false
+         },
+         {
+            "text":"Conceptual, metodológico, analítico, difusión y extensión",
+            "isCorrect":false
+         }
+      ]
+   },
+   {
+      "id":5,
+      "q":"Los problemas de investigación surgen a partir de identificar:",
+      "a":[
+         {
+            "text":"Vacíos teóricos y lagunas en el conocimiento.",
+            "isCorrect":false
+         },
+         {
+            "text":"Explicaciones insuficientes o contradictorias",
+            "isCorrect":false
+         },
+         {
+            "text":"Insuficiencia o dificultad para aplicar los conocimiento en contextos específicos",
+            "isCorrect":false
+         },
+         {
+            "text":"Todas las opciones son correctas",
+            "isCorrect":true
+         }
+      ]
+   },
+   {
+      "id":6,
+      "q":"Las hipótesis:",
+      "a":[
+         {
+            "text":"Permiten guiar la investigación.",
+            "isCorrect":false
+         },
+         {
+            "text":"Son respuestas conjeturales que se forman a partir del conocimiento existente.",
+            "isCorrect":false
+         },
+         {
+            "text":"Pueden surgir de la intuición o experiencia previa.",
+            "isCorrect":false
+         },
+         {
+            "text":"Todas las opciones son correctas.",
+            "isCorrect":true
+         }
+      ]
+   },
+   {
+      "id":7,
+      "q":"Sobre la teoría fundamentada podemos decir que:",
+      "a":[
+         {
+            "text":"Su propósito es desarrollar teoría, principalmente, a partir de los datos.",
+            "isCorrect":true
+         },
+         {
+            "text":"Su propósito es desarrollar teoría, principalmente, a partir de estudios previos.",
+            "isCorrect":false
+         },
+         {
+            "text":"Su lógica es deductiva.",
+            "isCorrect":false
+         },
+         {
+            "text":"Es el punto de partida de toda investigación.",
+            "isCorrect":false
+         }
+      ]
+   },
+   {
+      "id":8,
+      "q":"El objetivo del diseño de Investigación-Acción-Participativa es:",
+      "a":[
+         {
+            "text":"El lenguaje de los propios protagonistas.",
+            "isCorrect":false
+         },
+         {
+            "text":"La transformación del medio social.",
+            "isCorrect":true
+         },
+         {
+            "text":"Brindar soluciones sin tener en cuenta la realidad del colectivo con el que se trabaja.",
+            "isCorrect":false
+         },
+         {
+            "text":"Ninguna opción es correcta.",
+            "isCorrect":false
+         }
+      ]
+   },
+   {
+      "id":9,
+      "q":"La intervención a realizar en el diseño de investigación-acción-participativa:",
+      "a":[
+         {
+            "text":"Debe estar definida por los actores sociales.",
+            "isCorrect":true
+         },
+         {
+            "text":"Debe estar definida por los investigadores que son quienes detentan el conocimiento.",
+            "isCorrect":false
+         },
+         {
+            "text":"Se establece antes de conocer a los actores sociales.",
+            "isCorrect":false
+         },
+         {
+            "text":"Ninguna opción es correcta.",
+            "isCorrect":false
+         }
+      ]
+   },
+   {
+      "id":10,
+      "q":"Los medios con los que se realiza la recolección de datos en los diseños narrativos son:",
+      "a":[
+         {
+            "text":"Biografía, autobiografía, artefactos y entrevistas.",
+            "isCorrect":true
+         },
+         {
+            "text":"Biografía, autobiografía y entrevistas.",
+            "isCorrect":false
+         },
+         {
+            "text":"Biografía, autobiografía, investigación-acción-participativa y entrevistas.",
+            "isCorrect":false
+         },
+         {
+            "text":"Ninguna opción es correcta.",
+            "isCorrect":false
+         }
+      ]
+   },
+   {
+      "id":11,
+      "q":"Los estudios de diseño fenomenológico buscan:",
+      "a":[
+         {
+            "text":"Describir y comprender un fenómeno desde el punto de vista de vista de los participantes.",
+            "isCorrect":false
+         },
+         {
+            "text":"Analizar el discurso buscando posibles significados.",
+            "isCorrect":false
+         },
+         {
+            "text":"Dar lugar a la intuición del investigador para aprehender la experiencia de los participantes.",
+            "isCorrect":false
+         },
+         {
+            "text":"Todas las opciones son correctas.",
+            "isCorrect":true
+         }
+      ]
+   },
+   {
+      "id":12,
+      "q":"La definición de población indica que:",
+      "a":[
+         {
+            "text":"Es el conjunto de todos los casos que coinciden con una serie de características.",
+            "isCorrect":true
+         },
+         {
+            "text":"Es el subcconjunto de la muestra.",
+            "isCorrect":false
+         },
+         {
+            "text":"En un estudio cuantitativo, no es necesario definirla.",
+            "isCorrect":false
+         },
+         {
+            "text":"Ninguna opción es correcta.",
+            "isCorrect":false
+         }
+      ]
+   },
+   {
+      "id":13,
+      "q":"La muestra no probabilística:",
+      "a":[
+         {
+            "text":"La elección de los elementos de la población depende de la probabilidad y no de las características de la investigación.",
+            "isCorrect":false
+         },
+         {
+            "text":"La elección de los elementos de la población depende de las características de la investigación y no de la probabilidad.",
+            "isCorrect":true
+         },
+         {
+            "text":"La elección de los elementos de la población se decide de manera alatoria.",
+            "isCorrect":false
+         },
+         {
+            "text":"La elección de los elementos de la población se decide de acuerdo al tamaño muestral.",
+            "isCorrect":false
+         }
+      ]
+   },
+   {
+      "id":14,
+      "q":"La muestra de un estudio cualitativo:",
+      "a":[
+         {
+            "text":"Se define en el momento analítico de la investigación.",
+            "isCorrect":false
+         },
+         {
+            "text":"Se define en el momento conceptual de la investigación.",
+            "isCorrect":false
+         },
+         {
+            "text":"No se define en una etapa específica.",
+            "isCorrect":true
+         },
+         {
+            "text":"Se define antes de la inmersión inicial.",
+            "isCorrect":false
+         }
+      ]
+   },
+   {
+      "id":15,
+      "q":"En el muestreo de un estudio cualitativo:",
+      "a":[
+         {
+            "text":"La muestra final se decide cuando se alcanza la saturación de categorías.",
+            "isCorrect":true
+         },
+         {
+            "text":"La muestra debe componerse por un mínimo de 100 sujetos.",
+            "isCorrect":false
+         },
+         {
+            "text":"No se puede trabajar con estudio de caso.",
+            "isCorrect":false
+         },
+         {
+            "text":"Todas las opciones son correctas.",
+            "isCorrect":false
+         }
+      ]
+   },
 ]
